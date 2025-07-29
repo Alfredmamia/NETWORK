@@ -4,12 +4,12 @@ import { Icon } from 'leaflet';
 import { useLanguage } from '../contexts/LanguageContext';
 import { NetworkElement } from '../types/network';
 import { cameroonRegions } from '../data/cameroon-regions';
-import { Save, X, MapPin, Cable, Server, Settings, Zap, Building, Radio, Target, Navigation, Trash2, Plus, Database, Router, HardDrive, Antenna, Power as Tower } from 'lucide-react';
+import { Save, X, MapPin, Cable, Server, Settings, Zap, Building, Radio, Target, Navigation, Trash2, Plus, Database, Router, Antenna, Power as Tower } from 'lucide-react';
 
 // Fonction pour encoder en base64 compatible avec Unicode
 const safeBase64Encode = (str: string): string => {
   try {
-    return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (match, p1) => {
+    return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (_, p1) => {
       return String.fromCharCode(parseInt(p1, 16));
     }));
   } catch (error) {
