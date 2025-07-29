@@ -6,15 +6,12 @@ import {
   FileText,
   Download,
   Send,
-  Calendar,
   TrendingUp,
   AlertCircle,
   CheckCircle,
   BarChart3,
-  PieChart,
-  Globe,
 } from 'lucide-react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from 'recharts';
+import { XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar } from 'recharts';
 
 const ARTCompliance: React.FC = () => {
   const { t } = useLanguage();
