@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from 'react-leaflet';
 import { Icon } from 'leaflet';
 import { useLanguage } from '../contexts/LanguageContext';
-import { NetworkElement, NETWORK_COLORS } from '../types/network';
+import { NetworkElement } from '../types/network';
 import { cameroonRegions } from '../data/cameroon-regions';
-import { Save, X, MapPin, Cable, Server, Settings, Zap, Building, Radio, Target, Navigation, Trash2, Plus, Database, Wifi, Router, HardDrive, Antenna, Power as Tower } from 'lucide-react';
+import { Save, X, MapPin, Cable, Server, Settings, Zap, Building, Radio, Target, Navigation, Trash2, Plus, Database, Router, HardDrive, Antenna, Power as Tower } from 'lucide-react';
 
 // Fonction pour encoder en base64 compatible avec Unicode
 const safeBase64Encode = (str: string): string => {
