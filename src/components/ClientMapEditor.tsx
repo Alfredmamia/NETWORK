@@ -10,7 +10,6 @@ import {
   Building, 
   Building2, 
   Navigation, 
-  Trash2, 
   Plus, 
   Home,
   Factory,
@@ -23,7 +22,7 @@ import {
 // Fonction pour encoder en base64 compatible avec Unicode
 const safeBase64Encode = (str: string): string => {
   try {
-    return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (match, p1) => {
+    return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (_, p1) => {
       return String.fromCharCode(parseInt(p1, 16));
     }));
   } catch (error) {
@@ -92,7 +91,6 @@ const ClientMapEditor: React.FC<ClientMapEditorProps> = ({
   onCancel, 
   existingClients = []
 }) => {
-  const { t } = useLanguage();
   const [mapMode, setMapMode] = useState<'select' | 'place'>('select');
   const [selectedClientType, setSelectedClientType] = useState<string>('residential');
   const [placedClients, setPlacedClients] = useState<Array<{ 

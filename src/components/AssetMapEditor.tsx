@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from 'react-leaflet';
 import { Icon } from 'leaflet';
-import { useLanguage } from '../contexts/LanguageContext';
 import { NetworkElement } from '../types/network';
 import { cameroonRegions } from '../data/cameroon-regions';
 import { Save, X, MapPin, Cable, Server, Settings, Zap, Building, Radio, Target, Navigation, Trash2, Plus, Database, Router, Antenna, Power as Tower } from 'lucide-react';
