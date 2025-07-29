@@ -9,7 +9,7 @@ import { Save, X, MapPin, AlertTriangle, Clock, Zap, Navigation, Trash2, Plus, S
 // Fonction pour encoder en base64 compatible avec Unicode
 const safeBase64Encode = (str: string): string => {
   try {
-    return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (match, p1) => {
+    return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (_, p1) => {
       return String.fromCharCode(parseInt(p1, 16));
     }));
   } catch (error) {

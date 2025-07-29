@@ -27,7 +27,6 @@ interface SpliceDetailsProps {
 }
 
 const SpliceDetails: React.FC<SpliceDetailsProps> = ({ spliceId, onBack }) => {
-  const { t } = useLanguage();
   const [splice, setSplice] = useState<OpticalSplice | null>(null);
   const [selectedMapping, setSelectedMapping] = useState<FiberSpliceMapping | null>(null);
   const [showMappingModal, setShowMappingModal] = useState(false);

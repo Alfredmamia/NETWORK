@@ -24,6 +24,18 @@ interface FiberMapEditorProps {
   existingSections?: FiberSection[];
 }
 
+// Fonction pour encoder en base64 compatible avec Unicode
+const safeBase64Encode = (str: string): string => {
+  try {
+    return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, (_, p1) => {
+      return String.fromCharCode(parseInt(p1, 16));
+    }));
+  } catch (error) {
+    // Fallback pour les caractères problématiques
+    return btoa(str.replace(/[^\x00-\x7F]/g, ""));
+  }
+};
+
 // Icônes personnalisées pour les différents éléments
 const createCustomIcon = (color: string, iconType: string, size: number = 24) => {
   const iconHtml = `
