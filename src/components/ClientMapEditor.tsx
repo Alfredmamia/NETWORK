@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from 'react-leaflet';
 import { Icon } from 'leaflet';
-import { useLanguage } from '../contexts/LanguageContext';
 import { Client } from '../types';
 import { cameroonRegions } from '../data/cameroon-regions';
 import { 
@@ -12,11 +11,11 @@ import {
   Navigation, 
   Plus, 
   Home,
-  Factory,
   School,
   Hospital,
   ShoppingCart,
-  Coffee
+  Coffee,
+  Trash2
 } from 'lucide-react';
 
 // Fonction pour encoder en base64 compatible avec Unicode
@@ -275,7 +274,6 @@ const ClientMapEditor: React.FC<ClientMapEditorProps> = ({
 
     // Pour la démo, on sauvegarde le premier client placé
     const firstClient = placedClients[0];
-    const clientType = clientTypes.find(t => t.value === firstClient.type);
 
     const clientData = {
       name: formData.name,
