@@ -103,7 +103,6 @@ const AssetMapEditor: React.FC<AssetMapEditorProps> = ({
   onCancel, 
   existingAssets = []
 }) => {
-  const { t } = useLanguage();
   const [mapMode, setMapMode] = useState<'select' | 'place'>('select');
   const [selectedAssetType, setSelectedAssetType] = useState<string>('dslam');
   const [placedAssets, setPlacedAssets] = useState<Array<{ 

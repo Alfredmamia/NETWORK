@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from 'react-leaflet';
 import { Icon } from 'leaflet';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -7,16 +7,11 @@ import { cameroonRegions } from '../data/cameroon-regions';
 import { 
   Save, 
   X, 
-  MapPin, 
-  Users, 
   Building, 
   Building2, 
   Navigation, 
   Trash2, 
   Plus, 
-  Phone, 
-  Mail, 
-  Wifi,
   Home,
   Factory,
   School,
