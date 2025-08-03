@@ -1,7 +1,8 @@
 export interface NetworkElement {
   id: string;
   type: 'cable' | 'junction_box' | 'dslam' | 'distribution_point' | 'client_equipment' | 'pole' | 'conduit' | 'chamber' | 
-        'repeater' | 'wdm_multiplexer' | 'otn_equipment' | 'pop' | 'cti' | 'ixp' | 'datacenter' | 'adm' | 'router' | 
+        'repeater' | 'wdm_multiplexer' | 'otn_equipment' | 'pop' | 'cti' | 'ixp' | 'datacenter' | 'adm' | 'router' |
+        'central_office' | 'optical_splice' |
         'switch' | 'mpls_equipment' | 'bts' | 'antenna' | 'bbu' | 'microwave' | 'satellite' | 'cpe' | 'splitter' | 
         'fat' | 'mdu' | 'atb' | 'rg' | 'sr' | 'pc' | 'dslam_street' | 'modem' | 'filter' | 'amplifier' | 'odf' | 
         'otdr' | 'ups' | 'generator' | 'hvac' | 'access_control' | 'fire_detection';

@@ -25,10 +25,8 @@ import {
   Layers,
   Satellite,
   Map as MapIcon,
-  RotateCcw,
   ZoomIn,
   ZoomOut,
-  Crosshair,
   Move3D
 } from 'lucide-react';
 
@@ -106,10 +104,8 @@ const createCustomIcon = (color: string, iconType: string, size: number = 32) =>
 
 const ConnectionMapEditor: React.FC<ConnectionMapEditorProps> = ({ 
   onSave, 
-  onCancel, 
-  existingConnections = []
+  onCancel
 }) => {
-  const { t } = useLanguage();
   const [mapMode, setMapMode] = useState<'select' | 'place_client' | 'trace_path'>('select');
   const [selectedStartPoint, setSelectedStartPoint] = useState<any>(null);
   const [clientLocation, setClientLocation] = useState<{ lat: number; lng: number } | null>(null);
